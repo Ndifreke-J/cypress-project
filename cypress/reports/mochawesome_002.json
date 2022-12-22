@@ -1,0 +1,150 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-12-12T14:06:43.335Z",
+    "end": "2022-12-12T14:06:46.471Z",
+    "duration": 3136,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "7bd2b44e-a754-40a2-886b-cf8ee860a1d2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\pomTest.cy.js",
+      "file": "cypress\\e2e\\pomTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Login with invalid username",
+          "fullTitle": "Login with invalid username",
+          "timedOut": null,
+          "duration": 2613,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.enterUsername('Admin2');\nloginPage.enterPassword('admin123');\nloginPage.clickLogin();\ncy.get('.oxd-userdropdown-tab').click();",
+          "err": {
+            "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://opensource-demo.orangehrmlive.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo EAI_AGAIN opensource-demo.orangehrmlive.com\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.",
+            "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://opensource-demo.orangehrmlive.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo EAI_AGAIN opensource-demo.orangehrmlive.com\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at <unknown> (http://localhost:50000/__cypress/runner/cypress_runner.js:142019:82)\n    at visitFailedByErr (http://localhost:50000/__cypress/runner/cypress_runner.js:141323:12)\n    at <unknown> (http://localhost:50000/__cypress/runner/cypress_runner.js:142018:11)\n    at tryCatcher (http://localhost:50000/__cypress/runner/cypress_runner.js:11327:23)\n    at Promise._settlePromiseFromHandler (http://localhost:50000/__cypress/runner/cypress_runner.js:9262:31)\n    at Promise._settlePromise (http://localhost:50000/__cypress/runner/cypress_runner.js:9319:18)\n    at Promise._settlePromise0 (http://localhost:50000/__cypress/runner/cypress_runner.js:9364:10)\n    at Promise._settlePromises (http://localhost:50000/__cypress/runner/cypress_runner.js:9440:18)\n    at _drainQueueStep (http://localhost:50000/__cypress/runner/cypress_runner.js:6034:12)\n    at _drainQueue (http://localhost:50000/__cypress/runner/cypress_runner.js:6027:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:50000/__cypress/runner/cypress_runner.js:6043:5)\n    at Async.drainQueues (http://localhost:50000/__cypress/runner/cypress_runner.js:5913:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/pomTest.cy.js:6:7)\n\nFrom Node.js Internals:\n  Error: getaddrinfo EAI_AGAIN opensource-demo.orangehrmlive.com\n      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:71:26)",
+            "diff": null
+          },
+          "uuid": "be05e087-8df7-4760-9c3b-ebcd55bccc74",
+          "parentUUID": "7bd2b44e-a754-40a2-886b-cf8ee860a1d2",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [
+        {
+          "uuid": "1e3990f5-77ca-48de-8fed-389f2b2ca19e",
+          "title": "All Login Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login with valid credentials",
+              "fullTitle": "All Login Tests Login with valid credentials",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.enterUsername('Admin');\nloginPage.enterPassword('admin123');\nloginPage.clickLogin();\ncy.get('.oxd-userdropdown-tab').click();",
+              "err": {},
+              "uuid": "814c0fe7-50e8-4186-9235-f3e12f90470b",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Login with invalid password",
+              "fullTitle": "All Login Tests Login with invalid password",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.enterUsername('Admin');\nloginPage.enterPassword('admin1234');\nloginPage.clickLogin();\ncy.get('.oxd-userdropdown-tab').click();",
+              "err": {},
+              "uuid": "08b3b1ff-df1f-481b-8a21-836fd76ce2c0",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [
+            "814c0fe7-50e8-4186-9235-f3e12f90470b",
+            "08b3b1ff-df1f-481b-8a21-836fd76ce2c0"
+          ],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [
+        "be05e087-8df7-4760-9c3b-ebcd55bccc74"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 2613,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

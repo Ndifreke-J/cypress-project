@@ -1,0 +1,25 @@
+
+
+describe('todos API', () => {
+    it('returns JSON', () => {
+	cy.request('http://localhost:3000/todos')
+	  .its('headers')
+	  .its('content-type')
+	  .should('include','application/json')
+	})
+    })
+
+
+describe("REST API WITH CYPRESS", () => {
+    it('API Test-Header Validation', () => {
+        cy.request('https://pokeapi.co/api/v2/pokemon/20/').as('pokemon')
+        cy.get('@pokemon').its('headers').its('content-type')
+            .should('include','application/json; charset=utf-8')
+    })
+})
+
+    it('API Test-Status Validation', () => {
+        cy.request('https://pokeapi.co/api/v2/pokemon/25/').as('pokemon')
+        cy.get('@pokemon').its('status')
+            .should('equal', 200)
+    })

@@ -1,0 +1,65 @@
+
+
+cy.writeFile('sample.txt', 'Hello, I am Ndifreke\n')
+cy.writeFile('sample.txt', 'Hello, I am learning Cypress', {flag: 'a+'})
+
+cy.writeFile('./cypress/fixtures/sample.txt', 'Hello World'
+
+npm install --save-dev cypress-file-upload
+
+"compileOptions":{
+	"types":["cypress", "cypress-file-upload"]}
+
+import 'cypress-file-upload';
+
+// Import commands.js using ES2015 syntax:
+import './commands';
+
+cy.visit('...')
+
+cy.get('[name="myfile"]').attachFile('filePath');
+
+require('cypress-downloadfile/lib/downloadFileCommand')
+
+For Cypress 10 and above
+Add the following lines to cypress.config.js.
+
+const { defineConfig } = require('cypress')
+const {downloadFile} = require('cypress-downloadfile/lib/addPlugin')
+
+module.exports = defineConfig({
+  // setupNodeEvents can be defined in either
+  // the e2e or component configuration
+  e2e: {
+    setupNodeEvents(on, config) {
+         on('task', {downloadFile})
+      })
+    }
+  }
+})
+
+/// <reference types="cypress-downloadfile"/>
+
+
+cy.downloadFile('https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg','mydownloads','example.jpg','MyCustomAgentName')
+
+npx cypress run --reporter mochawesome
+
+npx mochawesome-merge cypress/report/mochawesome-report/*.json > cypress/report/output.json | out-file -encoding ascii cypress/report/output.json
+
+npx merge cypress/report/output.json --reportDir ./ --inline
+
+npm install mochawesome --save-dev
+
+cypress\reports
+
+{
+"reporter": "mochawesome",
+"reporterOptions": {
+"charts": true,
+"overwrite": false,
+"html": false,
+"json":true,
+"reportDir": "cypress/report/mochawesome-report"
+}
+}

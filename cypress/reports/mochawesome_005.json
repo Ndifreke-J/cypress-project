@@ -1,0 +1,91 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-12-12T14:07:17.542Z",
+    "end": "2022-12-12T14:09:07.027Z",
+    "duration": 109485,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ca315151-79dd-441c-8dcc-af041d3f4f18",
+      "title": "",
+      "fullFile": "cypress\\e2e\\test1.cy.js",
+      "file": "cypress\\e2e\\test1.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Google Search",
+          "fullTitle": "Google Search",
+          "timedOut": null,
+          "duration": 103343,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('https://google.com');\ncy.get('.gLFyf').type('Automation step by step');\ncy.contains('Google Search').click();\ncy.contains('JMeter Beginner').click();",
+          "err": {
+            "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+            "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://www.google.com/__cypress/runner/cypress_runner.js:140937:72)\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:141271:16)\n    at tryCatcher (https://www.google.com/__cypress/runner/cypress_runner.js:11327:23)\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:6449:41)\n    at tryCatcher (https://www.google.com/__cypress/runner/cypress_runner.js:11327:23)\n    at Promise._settlePromiseFromHandler (https://www.google.com/__cypress/runner/cypress_runner.js:9262:31)\n    at Promise._settlePromise (https://www.google.com/__cypress/runner/cypress_runner.js:9319:18)\n    at Promise._settlePromise0 (https://www.google.com/__cypress/runner/cypress_runner.js:9364:10)\n    at Promise._settlePromises (https://www.google.com/__cypress/runner/cypress_runner.js:9440:18)\n    at _drainQueueStep (https://www.google.com/__cypress/runner/cypress_runner.js:6034:12)\n    at _drainQueue (https://www.google.com/__cypress/runner/cypress_runner.js:6027:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://www.google.com/__cypress/runner/cypress_runner.js:6043:5)\n    at Async.drainQueues (https://www.google.com/__cypress/runner/cypress_runner.js:5913:14)",
+            "diff": null
+          },
+          "uuid": "31800ea7-a9cc-4da7-9425-cf40937b5afa",
+          "parentUUID": "ca315151-79dd-441c-8dcc-af041d3f4f18",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "31800ea7-a9cc-4da7-9425-cf40937b5afa"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 103343,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
